@@ -16,7 +16,7 @@
         <item name="itemIconSize">40dp</item>
         <item name="itemBackground">@color/mainColor</item>
         <item name="itemActiveIndicatorStyle">@null</item>
-        <item name="iconTint">@color/bar_color</item>
+        <item name="itemIconTint">@color/bar_color</item>
         <item name="itemTextColor">@color/bar_color</item>
 
 
