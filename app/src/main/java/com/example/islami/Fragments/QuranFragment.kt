@@ -1,6 +1,7 @@
 package com.example.islami.Fragments
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import com.example.islami.Adaptor
 import com.example.islami.data
 
 import com.example.islami.databinding.ActivityQuranFragmentBinding
+import com.example.islami.suraContext
 import com.example.islami.suraNamesList
 
 class QuranFragment : Fragment() {
@@ -32,6 +34,15 @@ class QuranFragment : Fragment() {
         }
 
         adaptor = Adaptor(suraList)
+        adaptor.OnClickAcion = object : Adaptor.OnSuraClick {
+            override fun onClick(item: data, position: Int) {
+                val intent = Intent(requireContext(), suraContext::class.java)
+                intent.putExtra("sura_name", item.suraName)
+                intent.putExtra("sura_position", item.suraNumber)
+                startActivity(intent)
+            }
+        }
+
         binding.suraView.adapter = adaptor
     }
 

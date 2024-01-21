@@ -41,4 +41,5 @@ class Adaptor(var suraIndexItems: List<data>) : Adapter<Adaptor.appViewHolder>()
     }
 
 
+
 }
