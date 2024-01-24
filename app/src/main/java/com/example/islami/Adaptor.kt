@@ -6,9 +6,9 @@ import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.islami.databinding.ActivitySuraNameBinding
 
-class Adaptor(var suraIndexItems: List<data>) : Adapter<Adaptor.appViewHolder>() {
+class Adaptor(var suraIndexItems: ArrayList<data>) : Adapter<Adaptor.appViewHolder>() {
 
-    var OnClickAcion: OnSuraClick? = null
+    var OnClickAcion: OnTextClick? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): appViewHolder {
         val context = parent.context
         val inflater = LayoutInflater.from(context)
@@ -28,14 +28,14 @@ class Adaptor(var suraIndexItems: List<data>) : Adapter<Adaptor.appViewHolder>()
         }
     }
 
-    interface OnSuraClick {
+    interface OnTextClick {
         fun onClick(item: data, position: Int)
     }
 
     class appViewHolder(var binding: ActivitySuraNameBinding) : ViewHolder(binding.root) {
         fun viewTheItems(item: data) {
-            binding.suraName.text = item.suraName
-            binding.suraNumber.text = "${item.suraNumber}" // add the int in the brackets to convert to String
+            binding.suraName.text = item.name
+            binding.suraNumber.text = "${item.index}" // add the int in the brackets to convert to String
 
         }
     }

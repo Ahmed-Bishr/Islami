@@ -29,16 +29,16 @@ class QuranFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val suraList = suraNamesList.mapIndexed { position, item ->
+        val suraList = ArrayList(suraNamesList.mapIndexed { position, item ->
             data(item, position + 1)
-        }
+        })
 
         adaptor = Adaptor(suraList)
-        adaptor.OnClickAcion = object : Adaptor.OnSuraClick {
+        adaptor.OnClickAcion = object : Adaptor.OnTextClick {
             override fun onClick(item: data, position: Int) {
                 val intent = Intent(requireContext(), suraContext::class.java)
-                intent.putExtra("sura_name", item.suraName)
-                intent.putExtra("sura_position", item.suraNumber)
+                intent.putExtra("sura_name", item.name)
+                intent.putExtra("sura_position", item.index)
                 startActivity(intent)
             }
         }

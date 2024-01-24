@@ -4,13 +4,15 @@ import java.lang.reflect.Array
 
 data class data(
 
-    var suraName: String,
-    var suraNumber: Int,
+    var name: String,
+    var index: Int,
 
-    )
+)
 
 
-var suraNamesList = listOf(
+
+
+var suraNamesList = arrayListOf(
     "الفاتحه",
     "البقرة",
     "آل عمران",

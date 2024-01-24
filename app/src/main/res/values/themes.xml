@@ -10,7 +10,9 @@
     <item name="mainColor" type="color">#B7935F</item>
     <item name="iconColor" type="color">#000000</item>
     <item name="textColor" type="color">#000000</item>
+    <item name="sebha_button" type="color">#ffffff</item>
     <item name="iconColorClicked" type="color">#ffffff</item>
+
     
     <style name="button_navigation_style">
 

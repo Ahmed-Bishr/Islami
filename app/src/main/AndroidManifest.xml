@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Islami"
         tools:targetApi="31">
         <activity
+            android:name=".sebha"
+            android:exported="false" />
+        <activity
             android:name=".hadeeth_Name"
             android:exported="false" />
         <activity
