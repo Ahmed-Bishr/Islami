@@ -40,7 +40,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_icon" />
 
-
     <View
         android:id="@+id/secondLine"
         android:layout_width="0dp"
