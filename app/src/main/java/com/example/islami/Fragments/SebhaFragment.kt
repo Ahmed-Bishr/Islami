@@ -17,6 +17,7 @@ class SebhaFragment : Fragment() {
 
     lateinit var binding: ActivitySebhaFragmentBinding
     var count = 0
+    var rotation = 93F
 
     // The onCreateView() method is called when the fragment should create its layout.
     override fun onCreateView(
@@ -38,12 +39,8 @@ class SebhaFragment : Fragment() {
     // The countTasbeeh() method is responsible for updating the
     // tasbeeh counter and changing the text on each button click.
     private fun countTasbeeh() {
-        var rotation = 93F
         binding.tasbeeh.setOnClickListener {
-            count++
-            rotation += 93F
-            binding.body.rotation = rotation
-            binding.tasbeehCount.text = count.toString()
+            onClickMainFunction()
 
             // Check the count and current tasbeeh text to determine if the text should be changed.
             if (count == 33 && binding.tasbeeh.text == "سبحان الله") {
@@ -65,8 +62,21 @@ class SebhaFragment : Fragment() {
         }
     }
 
+    // reset the counter to zero
     private fun resetTheCounter() {
         count = 0
+        binding.tasbeehCount.text = count.toString()
+    }
+
+    /* main function when the button is Clicked
+    1 - increas the counter by one
+    2- rotate the image with 93 degree
+    3- change the count text on the tasbeeh count View
+    */
+    private fun onClickMainFunction() {
+        count++
+        rotation += 93F
+        binding.body.rotation = rotation
         binding.tasbeehCount.text = count.toString()
     }
 
