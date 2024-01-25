@@ -32,9 +32,7 @@ class SebhaFragment : Fragment() {
     // The onViewCreated() method is called after the fragment's view has been created.
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        // Call the countTasbeeh() method to initialize the tasbeeh counter.
-        countTasbeeh()
+        countTasbeeh()         // Call the countTasbeeh() method to initialize the tasbeeh counter.
     }
 
     // The countTasbeeh() method is responsible for updating the
@@ -59,6 +57,7 @@ class SebhaFragment : Fragment() {
             } else if (count == 33 && binding.tasbeeh.text == "استغفر الله") {
                 resetTheCounter()
                 binding.tasbeeh.text = "الحمد لله"
+
             } else if (count == 33 && binding.tasbeeh.text == "الحمد لله") {
                 resetTheCounter()
                 binding.tasbeeh.text = "سبحان الله"
