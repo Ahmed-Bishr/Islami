@@ -69,7 +69,7 @@ class SebhaFragment : Fragment() {
     }
 
     /* main function when the button is Clicked
-    1 - increas the counter by one
+    1 - increase the counter by one
     2- rotate the image with 93 degree
     3- change the count text on the tasbeeh count View */
     private fun onClickMainFunction() {
