@@ -35,7 +35,7 @@ class hadeethFragment : Fragment() {
             override fun onClick(item: data, position: Int) {
                 val intent = Intent(requireContext(), hadeethContent::class.java)
                 intent.putExtra("hadeeth_name", item.name)
-                intent.putExtra("hadeeth_index", item.index)
+                intent.putExtra("hadeeth_index", position)
                 startActivity(intent)
             }
         }
@@ -48,8 +48,5 @@ class hadeethFragment : Fragment() {
         for (i in 1..50) {
             hadeethList.add(data(name, i))
         }
-
     }
-
-
 }

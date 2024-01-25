@@ -3,9 +3,23 @@
     <style name="Base.Theme.Islami" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:statusBarColor">#141A2E</item>
+
     </style>
 
+    <item name="mainColor" type="color">#141A2E</item>
     <item name="textColor" type="color">#ffffff</item>
+    <item name="iconColor" type="color">#ffffff</item>
+    <item name="iconColorClicked" type="color">#FACC1D</item>
+    <item name="lineColor" type="color">#FACC1D</item>
+    <item name="loadingColor" type="color">#FACC1D</item>
+    <item name="countView" type="color">#141A2E</item>
+    <item name="buttonSebhaa" type="color">#FACC1D</item>
+    <item name="buttonText" type="color">#0F1424</item>
+
+
+
 
 
 </resources>

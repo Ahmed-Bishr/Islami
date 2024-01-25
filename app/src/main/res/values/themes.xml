@@ -11,7 +11,13 @@
     <item name="iconColor" type="color">#000000</item>
     <item name="textColor" type="color">#000000</item>
     <item name="sebha_button" type="color">#ffffff</item>
-    <item name="iconColorClicked" type="color">#ffffff</item>
+    <item name="iconColorClicked" type="color">#000000</item>
+    <item name="iconColorNotClicked" type="color">#ffffff</item>
+    <item name="lineColor" type="color">#B7935F</item>
+    <item name="loadingColor" type="color">#B7935F</item>
+    <item name="countView" type="color">#B7935F</item>
+    <item name="buttonSebhaa" type="color">#B7935F</item>
+    <item name="buttonText" type="color">#ffffff</item>
 
     
     <style name="button_navigation_style">
