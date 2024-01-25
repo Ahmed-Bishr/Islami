@@ -16,6 +16,7 @@ import com.example.islami.databinding.ActivitySebhaFragmentBinding
 class SebhaFragment : Fragment() {
 
     lateinit var binding: ActivitySebhaFragmentBinding
+    var count = 0
 
     // The onCreateView() method is called when the fragment should create its layout.
     override fun onCreateView(
@@ -39,7 +40,6 @@ class SebhaFragment : Fragment() {
     // The countTasbeeh() method is responsible for updating the
     // tasbeeh counter and changing the text on each button click.
     private fun countTasbeeh() {
-        var count = 0
         var rotation = 93F
         binding.tasbeeh.setOnClickListener {
             count++
@@ -49,26 +49,26 @@ class SebhaFragment : Fragment() {
 
             // Check the count and current tasbeeh text to determine if the text should be changed.
             if (count == 33 && binding.tasbeeh.text == "سبحان الله") {
-                count = 0
-                binding.tasbeehCount.text = count.toString()
+                resetTheCounter()
                 binding.tasbeeh.text = "الله اكبر"
 
             } else if (count == 33 && binding.tasbeeh.text == "الله اكبر") {
-                count = 0
-                binding.tasbeehCount.text = count.toString()
+                resetTheCounter()
                 binding.tasbeeh.text = "استغفر الله"
 
             } else if (count == 33 && binding.tasbeeh.text == "استغفر الله") {
-                count = 0
-                binding.tasbeehCount.text = count.toString()
+                resetTheCounter()
                 binding.tasbeeh.text = "الحمد لله"
             } else if (count == 33 && binding.tasbeeh.text == "الحمد لله") {
-                count = 0
-                binding.tasbeehCount.text = count.toString()
+                resetTheCounter()
                 binding.tasbeeh.text = "سبحان الله"
             }
-
         }
+    }
+
+    private fun resetTheCounter() {
+        count = 0
+        binding.tasbeehCount.text = count.toString()
     }
 
 }
