@@ -34,10 +34,10 @@ class SebhaFragment : Fragment() {
 
     private fun countTasbeeh() {
         var count = 0
-        var rotation = 9.166667F
+        var rotation = 93F
         binding.tasbeeh.setOnClickListener {
             count++
-            rotation++
+            rotation += 93F
             binding.body.rotation = rotation
             binding.tasbeehCount.text = count.toString()
 
