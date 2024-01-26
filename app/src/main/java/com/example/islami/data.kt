@@ -5,7 +5,10 @@ import java.lang.reflect.Array
 data class data(
 
     var name: String,
-    var index: Int,
+    var index: Int?,
+    var hadeethName : String  = "رقم الحديث "
+
+
 
 )
 

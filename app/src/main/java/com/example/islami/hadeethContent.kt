@@ -17,21 +17,15 @@ class hadeethContent : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHadeethContentBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        onClickListenerOnHadeethName()
+    }
+    @SuppressLint("SetTextI18n")
+    private fun onClickListenerOnHadeethName (){
         val title = intent.getStringExtra("hadeeth_name")
-        val postion = number()
         binding.backButton.setOnClickListener {
             finish()
         }
-        binding.titleTextView.text = "$title $postion"
+        binding.titleTextView.text = "$title "
     }
-
-    private fun number(): Int {
-        var indext = 0
-        for (i in 1..50) {
-            indext = i
-        }
-        return indext
-    }
-
 
 }
