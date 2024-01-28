@@ -6,16 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.islami.Adaptor
 import com.example.islami.HadeethAdaptor
-import com.example.islami.data
 import com.example.islami.databinding.ActivityHadeethFragmentBinding
-import com.example.islami.fileViewAdaptor
 import com.example.islami.hadeethContent
 import com.example.islami.hadeethData
 import com.example.islami.hadeethList
-import com.example.islami.suraContext
-import com.example.islami.suraNamesList
+
 
 class hadeethFragment : Fragment() {
 
