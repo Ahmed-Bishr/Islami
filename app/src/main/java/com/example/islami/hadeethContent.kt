@@ -11,21 +11,30 @@ import com.example.islami.databinding.ActivityHadeethContentBinding
 class hadeethContent : AppCompatActivity() {
 
     lateinit var binding: ActivityHadeethContentBinding
+    lateinit var adaptor: fileViewAdaptor
 
-    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHadeethContentBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        onClickListenerOnHadeethName()
-    }
-    @SuppressLint("SetTextI18n")
-    private fun onClickListenerOnHadeethName (){
-        val title = intent.getStringExtra("hadeeth_name")
+        val title = intent.getStringExtra("hadeethname")
+        val index = intent.getIntExtra("hadeethposition", -1)
         binding.backButton.setOnClickListener {
             finish()
         }
-        binding.titleTextView.text = "$title "
+        binding.titleTextView.text = "$title $index"
+        adaptor = fileViewAdaptor(null)
+        binding.hadeethView.adapter = adaptor
+        readFromFile(index)
+    }
+
+    fun readFromFile(index: Int) {
+        var filename = "h${index}.txt"
+        val fileReader = application.assets.open(filename).bufferedReader().use {
+            it.readText()
+        }
+        val dataSpliter = fileReader.split("\n")
+        adaptor.adaptorUpdate(dataSpliter)
     }
 
 }

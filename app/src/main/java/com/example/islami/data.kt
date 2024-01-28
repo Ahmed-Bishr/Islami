@@ -6,12 +6,9 @@ data class data(
 
     var name: String,
     var index: Int?,
-    var hadeethName : String  = "رقم الحديث "
 
 
-
-)
-
+    )
 
 
 

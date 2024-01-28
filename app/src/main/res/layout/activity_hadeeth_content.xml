@@ -9,6 +9,7 @@
     tools:context=".hadeethContent">
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent">
@@ -40,5 +41,20 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hadeeth_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/sura_hadeeth_view"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        app:layout_constraintWidth_percent="0.85"
+        tools:listitem="@layout/hadeeth_name" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

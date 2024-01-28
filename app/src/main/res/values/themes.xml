@@ -18,6 +18,8 @@
     <item name="countView" type="color">#B7935F</item>
     <item name="buttonSebhaa" type="color">#B7935F</item>
     <item name="buttonText" type="color">#ffffff</item>
+    <item name="view_context_color" type="color">#CCFFFFFF</item>
+    <item name="context_Data_Color" type="color">#000000</item>
 
     
     <style name="button_navigation_style">

@@ -17,6 +17,10 @@
     <item name="countView" type="color">#141A2E</item>
     <item name="buttonSebhaa" type="color">#FACC1D</item>
     <item name="buttonText" type="color">#0F1424</item>
+    <item name="view_context_color" type="color">#CC141A2E</item>
+    <item name="context_Data_Color" type="color">#FACC1D</item>
+
+
 
 
 
